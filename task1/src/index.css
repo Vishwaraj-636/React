@@ -1,0 +1,255 @@
+@font-face {
+  font-family: reala;
+  src: url("./assets/raela-font/RaelademoThin-q2A11.otf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: reala;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.navbar .navbar-options ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  list-style: none;
+}
+.navbar .navbar-options ul li {
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+.navbar .navbar-options ul li:hover {
+  border: 1px solid black;
+}
+.navbar button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  font-weight: 200;
+}
+.navbar button i {
+  margin-left: 10px;
+  font-weight: 200;
+  font-size: 15px;
+}
+.navbar h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.header-box {
+  height: 500px;
+  width: 100%;
+  background-color: #e0dddd;
+  border-radius: 20px;
+  background-image: url("./assets/Gemini_Generated_Image_qhn5ypqhn5ypqhn5.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.header-box .head-upper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+  color: white;
+  width: 100%;
+}
+.header-box .head-upper .box-upper {
+  text-align: center;
+}
+.header-box .head-upper .box-upper h1 {
+  font-size: 50px;
+}
+.header-box .head-upper .box-upper p {
+  font-size: 20px;
+}
+.header-box .head-upper .box-upper button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  font-weight: 200;
+}
+.header-box .head-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, 0.5) 100%);
+  border-radius: 20px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 10px;
+}
+.header-box .head-bottom .bottom-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-box .head-bottom .bottom-left p {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+}
+.header-box .head-bottom .bottom-left .trainer-img {
+  padding: 5px 10px;
+  background-color: rgba(236, 232, 232, 0.542);
+  border-radius: 50px;
+}
+.header-box .head-bottom .bottom-left .trainer-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.header-box .head-bottom .bottom-right a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.about-section {
+  width: calc(100% - 40px);
+  margin: 40px 20px;
+}
+.about-section .about-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.about-section .about-header .tag {
+  border: 1px solid #ddd;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+.about-section .about-header p {
+  max-width: 450px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.about-section .about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+.about-section .about-grid .card {
+  padding: 25px;
+  border-radius: 20px;
+  min-height: 200px;
+}
+.about-section .about-grid .card-dark {
+  background: #0c1f36;
+  color: white;
+}
+.about-section .about-grid .card-image {
+  background: url("./assets/player.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-section .about-grid .card-image .badge {
+  background: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+.about-section .about-grid .card-light {
+  background: #f1f2f5;
+}
+.about-section .numbers-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.about-section .numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+.about-section .numbers-grid .number h2 {
+  font-size: 28px;
+}
+.about-section .numbers-grid .number p {
+  font-size: 12px;
+  color: #777;
+}
+
+.services {
+  margin: 60px 20px;
+}
+.services .services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 25px;
+  align-items: center;
+}
+.services .services-grid .service-text .tag {
+  border: 1px solid #ddd;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+.services .services-grid .service-text h3 {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+.services .services-grid .service-text button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+.services .services-grid .service-card {
+  height: 220px;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  font-weight: 600;
+}
+.services .services-grid .program {
+  background: url("./assets/tennis-program.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.services .services-grid .court {
+  background: url("./assets/tennis-ball.jpg");
+  background-size: cover;
+  background-position: center;
+}/*# sourceMappingURL=index.css.map */

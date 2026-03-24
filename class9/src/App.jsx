@@ -1,31 +1,29 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
+import Card from './component/Card';
 
 const App = () => {
-  const [num1, setnum1] = useState(0)
-  const [num2, setnum2] = useState(0)
-  const [num3, setnum3] = useState(0)
- 
-  useEffect(() => {
-    console.log('done')
-  },[num1,num2])
-  return (
-    <div>
-      <h1>{num1}</h1>
-      <button onClick={() => {
-        setnum1(Math.floor(Math.random()*100))
-      }}>change number 1</button>
-      <br />
-      <h1>{num2}</h1>
-      <button onClick={() => {
-        setnum2(Math.floor(Math.random()*100))
-      }}>change number 1</button>
-      <br />
-      <h1>{num3}</h1>
-      <button onClick={() => {
-        setnum3(Math.floor(Math.random()*100))
-      }}>change number 1</button>
-    </div>
-  )
-}
+  const [user, setUser] = useState(null); 
+  const getData = async () => {
+    const response = await axios.get('https://randomuser.me/api/');
+    setUser(response.data.results[0]);
+    console.log(response.data.results[0]);
+  };
 
-export default App
+  return (
+    <div className='bg-black h-screen p-10 '>
+      <div className='border-2 border-white flex flex-col gap-10 items-center'>
+        <button
+          className='text-white bg-emerald-800 p-2 mt-5'
+          onClick={getData}
+        >
+          Click me
+        </button>
+
+        {user && <Card user={user} />} 
+      </div>
+    </div>
+  );
+};
+
+export default App;
